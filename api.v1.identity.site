@@ -1,0 +1,16 @@
+location /api/identity {
+        return 301 /api/v1/identity;
+}
+
+location /api/v1/identity {
+         default_type 'text/plain';
+         content_by_lua_file api.v1.identity.lua;
+}
+
+location ~^/api/v1/identity/(?<redis_key>[a-zA-Z0-9_\.]+) {
+        default_type            'text/plain';
+        content_by_lua_file     api.v1.redis.lua;
+}
+
+
+
