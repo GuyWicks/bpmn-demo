@@ -1,0 +1,154 @@
+<html>
+<title>Login to the British Library</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style type="text/css">
+
+.bl-dark-teal{background-color:#004853;color:white;}
+.bl-teal{background-color: #00788b;color:white;}
+
+.bl-header-border{border-bottom: 1px solid white;}
+.bl-padding-left-off{padding-left: 0px;}
+.bl-logo-height{min-height: 101px;}
+.bl-logo-border{border-right: 1px solid white;}
+.bl-logo-respect{padding-left:78px !important;}
+.bl-body{background-color: #eee;}
+.bl-content-height{min-height: 600px;}
+.bl-topnav-padding{padding-top: 0px;}
+.bl-topnav-padding .w3-topnav a{padding-left:20px;padding-right:20px;margin-left:0px;margin-right:0px;border-left:0px solid transparent;border-right: 1px solid white;border-radius: 0px;}
+.bl-topnav-padding .w3-topnav {padding-bottom:0px;}
+
+body{font-family:arial,sans-serif}
+
+</style>
+</head>
+
+<body class="w3-content bl-body" style="max-width:976px">
+
+	<div class="w3-container bl-dark-teal bl-padding-left-off bl-logo-height bl-header-border">
+		<div class="w3-left"><img class="bl-logo-border" src="//www.bl.uk/britishlibrary/resources/global/images/bl_logo_100.gif"/></div>
+<!--		
+		<h2 class="bl-logo-respect">Intranet</h2>
+		<div class="w3-row bl-topnav-padding w3-hide-small w3-hide-medium">
+			<nav class="w3-topnav w3-large">
+				<a href="#">Home</a>
+				<a href="#">News</a>
+				<a href="#">Events</a>
+				<a href="#">How to...</a>
+				<a href="#">Policies</a>
+				<a href="#">Our structure</a>
+				<a href="#">Our purposes</a>
+			</nav>
+		</div>
+-->		
+	</div>
+
+	<div class="w3-container bl-teal w3-xlarge w3-padding-12">Secure Login</div>
+<!--
+	<div class="w3-navbar bl-dark-teal w3-hide-small w3-hide-medium">
+		<ul class="w3-navbar">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+		</ul>
+	</div>
+-->
+	<div class="w3-container w3-white w3-padding-32 bl-content-height">
+		<div class="w3-half w3-padding-large">
+			
+			<form class="w3-container">
+				<header class="w3-container">
+					<h2>Regsitered customers</h2>
+				</header>
+
+				<div class="w3-row w3-section">
+					<label>Username</label>
+					<input class="w3-input w3-border w3-pale-yellow" type="text" required>
+				</div>
+
+				<div class="w3-row w3-section">
+					<label>Password</label>
+					<input class="w3-input w3-border w3-pale-yellow" type="password" required>
+				</div>
+
+				<div class="w3-row w3-section" >
+					<div class="w3-half">
+						<div class=""><a class="w3-text-grey w3-hover-dark-grey" href="#">Forgotton username</a></div>
+						<div class="w3-text-grey"><a href="#">Forgotton password</a></div>
+					</div>
+
+					<div class="w3-half">
+						<button class="w3-btn w3-teal w3-hover-grayscale w3-right">Login ></button>
+					</div>
+				</div>		
+			</form>
+
+		</div>
+
+
+		<div class="w3-half w3-padding-large">
+			
+			<form class="w3-container">			
+				<header class="w3-container">
+					<h2>Guest login</h2>
+				</header>
+
+				<div class="w3-panel">
+				<div class="w3-row w3-padding-64">Create an account after checkout to allow you to place an order faster next time.</div>
+
+				<div class="w3-row w3-right"><button class="w3-btn w3-teal">Guest checkout</button></div>
+				</div>
+			</form>
+
+		</div>
+
+	</div>
+
+
+<div class="w3-container">
+  <button onclick="document.getElementById('WrongCredentials').style.display='block'" class="w3-btn">Open Modal</button>
+
+  <div id="WrongCredentials" class="w3-modal">
+    <div class="w3-modal-content w3-card-8">
+      <header class="w3-container w3-deep-orange"> 
+        <span onclick="document.getElementById('WrongCredentials').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        
+      </header>
+      <div class="w3-container">
+        <h3>Login failed</h3
+
+		<ul>
+			<p>Possible reasons your login did not succeed:</p>
+
+			<li>You have mistyped your email or username or password</li>
+			<li>You are not registered for a British Library Online Account</li>
+			<li>You haven't upgraded to a British Library Online Account. </li>
+		</ul>
+        <p><strong>Click on the "x" or click anywhere outside to close this panel</strong></p>
+
+      </div>
+      <footer class="w3-container w3-deep-orange">
+        <p></p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('WrongCredentials');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+
+</html>
